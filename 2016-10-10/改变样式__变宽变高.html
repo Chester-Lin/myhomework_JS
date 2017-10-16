@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2,#box3{
+				width: 200px;
+				height: 200px;
+				background: red;				
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<input type="button" value="变宽500" onclick="document.getElementById('box1').style.width='500px';   "/>
+		<input type="button" value="变高500" onclick="document.getElementById('box1').style.height='500px';  "/>
+		<div id="box1"></div>
+		<br />
+		
+		<input type="button" value="变宽400" onclick="document.getElementById('box2').style.width='400px';   "/>
+		<input type="button" value="变高400" onclick="document.getElementById('box2').style.height='400px';  "/>
+		<div id="box2"></div>
+		<br />
+		
+		<input type="button" value="变宽1000" onclick="document.getElementById('box3').style.width='1000px';   "/>
+		<input type="button" value="变高1000" onclick="document.getElementById('box3').style.height='1000px';   "/>
+		<div id="box3"></div>
+		<br />
+	</body>
+</html>

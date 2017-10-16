@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2,#box3{
+				width: 300px;height: 300px;background: red;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var box2=document.getElementById("box2");
+				var box3=document.getElementById("box3");
+		       box1.onclick=function(){
+					//box1.style.background="blue";
+					this.style.background="pink";
+				}
+				box2.onclick=function(){
+					//box2.style.background="blue";
+					this.style.background="pink";
+				}
+				box3.onclick=function(){
+					//box3.style.background="blue";
+					this.style.background="pink";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div><br />
+		<div id="box2"></div><br />
+		<div id="box3"></div>
+	</body>
+</html>

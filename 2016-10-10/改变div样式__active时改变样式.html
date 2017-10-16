@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2,#box3{
+				width: 100px;height: 100px;background: red;
+			}
+			#box4,#box5,#box6{
+				width: 50px;height: 50px;background: blue;
+			}
+			#box7,#box8,#box9{
+				width: 150px;height: 150px;background: pink;
+			}
+			#box10,#box11,#box12{
+				width: 150px;height: 150px;background: pink;
+			}
+
+		</style>
+	</head>
+	<body>
+		第一种：调用script中的方法
+		<div id="box1" onmouseover="test1('box1')" onmouseout="test2('box1')"></div><br />
+		<div id="box2" onmouseover="test1('box2')" onmouseout="test2('box2')"></div><br />
+		<div id="box3" onmouseover="test1('box3')" onmouseout="test2('box3')"></div>
+		
+		---------------------------------------------------------------
+		第二种：直接行内写事件代码
+		<div id="box4" 
+			onmouseover="document.getElementById('box4').style.width='200px';  document.getElementById('box4').style.height='200px';  document.getElementById('box4').style.background='yellow';" 
+			onmouseout="document.getElementById('box4').style.width='50px';  document.getElementById('box4').style.height='50px';  document.getElementById('box4').style.background='blue'; "></div><br />
+		<div id="box5" 
+			onmouseover="document.getElementById('box5').style.width='200px';  document.getElementById('box5').style.height='200px';  document.getElementById('box5').style.background='yellow';" 
+			onmouseout="document.getElementById('box5').style.width='50px';  document.getElementById('box5').style.height='50px';  document.getElementById('box5').style.background='blue'; "></div><br />
+		<div id="box6" 
+			onmouseover="document.getElementById('box6').style.width='200px';  document.getElementById('box6').style.height='200px';  document.getElementById('box6').style.background='yellow';" 
+			onmouseout="document.getElementById('box6').style.width='50px';  document.getElementById('box6').style.height='50px';  document.getElementById('box6').style.background='blue'; "></div><br />
+		
+		-----------------------------------------------------------------
+		第三种：调用script中的方法，获取id赋给对象
+		<div id="box7" onmouseover="toBig('box7')" onmouseout="toSmall('box7')"></div><br />
+		<div id="box8" onmouseover="toBig('box8')" onmouseout="toSmall('box8')"></div><br />
+		<div id="box9" onmouseover="toBig('box9')" onmouseout="toSmall('box9')"></div>
+		
+		-----------------------------------------------------------------
+		第四种：运用script绑定元素事件，方法中调用方法
+		<div id="box10"></div><br />
+		<div id="box11"></div><br />
+		<div id="box12"></div>
+	</body>
+	<script>
+		function test1(e){
+			document.getElementById(e).style.width="200px";
+			document.getElementById(e).style.height="200px";
+			document.getElementById(e).style.background="gray";
+		}
+		function test2(e){
+			document.getElementById(e).style.width="100px";
+			document.getElementById(e).style.height="100px";
+			document.getElementById(e).style.background="red";
+		}
+		
+		function toBig(e){
+			var toB=document.getElementById(e);
+			toB.style.width="200px";
+			toB.style.height="200px";
+			toB.style.background="green";
+		}
+		function toSmall(e){
+			var toS=document.getElementById(e);
+			toS.style.width="150px";
+			toS.style.height="150px";
+			toS.style.background="pink";
+		}
+		
+		
+		var a10=document.getElementById('box10');
+		a10.onmouseover=function(){
+			    toBig("box10");
+		}
+		a10.onmouseout=function(){
+			    toSmall("box10");
+		}
+		var b11=document.getElementById('box11');
+		b11.onmouseover=function(){
+			    toBig("box11");
+		}
+		b11.onmouseout=function(){
+			    toSmall("box11");
+		}
+		var c12=document.getElementById('box12');
+		c12.onmouseover=function(){
+			    toBig("box12");
+		}
+		c12.onmouseout=function(){
+			    toSmall("box12");
+		}
+		
+	</script>
+</html>

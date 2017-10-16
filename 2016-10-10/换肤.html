@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="" id="link">
+		<style>
+			/*.yellow{
+				background: yellow;
+			}
+			.green{
+				background: green;
+			}
+			.gray{
+				background: gray;
+			}*/
+		</style>
+		<script>
+			window.onload=function(){
+				 var bt1=document.getElementById('bt1');
+				 var bt2=document.getElementById('bt2');
+				 var bt3=document.getElementById('bt3');
+				 var body=document.getElementById('body');
+				 
+				 bt1.onclick=function(){
+				 	 body.className="yellow";
+				 }
+				  bt2.onclick=function(){
+				 	 body.className="green";
+				 }
+				   bt3.onclick=function(){
+				 	 body.className="gray";
+				 }
+	 //--------------------------------------------------------------------------------------------------------
+	             var bt4=document.getElementById('bt4');
+				 var bt5=document.getElementById('bt5');
+				 var bt6=document.getElementById('bt6');
+				 var Obody=document.body;
+				 
+				 bt4.onclick=function(){
+				 	 Obody.className="yellow";
+				 }
+				  bt5.onclick=function(){
+				 	 Obody.className="green";
+				 }
+				   bt6.onclick=function(){
+				 	 Obody.className="gray";
+				 }
+	//--------------------------------------------------------------------------------------------------------
+	             var bt7=document.getElementById('bt7');
+				 var bt8=document.getElementById('bt8');
+				 var bt9=document.getElementById('bt9');
+				 var Pbody=document.body;
+				 
+				 bt7.onclick=function(){
+				 	 Pbody.style.background="yellow";
+				 }
+				  bt8.onclick=function(){
+				 	 Pbody.style.background="green";
+				 }
+				   bt9.onclick=function(){
+				 	 Pbody.style.background="gray";
+				 }
+	   	//--------------------------------------------------------------------------------------------------------
+	             var link1=document.getElementById('link1');
+				 var link2=document.getElementById('link2');
+				 var link3=document.getElementById('link3');
+				 var olink=document.getElementById('link');
+				 
+				 link1.onclick=function(){
+				 	 olink.href="skin1.css";
+				 }
+				  link2.onclick=function(){
+				 	  olink.href="skin2.css";
+				 }
+				   link3.onclick=function(){
+				 	  olink.href="skin3.css";	 
+			     }	
+			}
+	
+		</script>
+	</head>
+	<body id="body" class="yellow">
+		第一种：更改classname   body给id<br />
+		<input type="button"  value="黄色"  id="bt1"/>
+		<input type="button"  value="绿色"  id="bt2"/>
+		<input type="button"  value="灰色"  id="bt3"/>
+		<br />
+		--------------------------------------------------------------------------<br />
+		第二种：更改classname   body不给id<br />
+		<input type="button"  value="黄色"  id="bt4"/>
+		<input type="button"  value="绿色"  id="bt5"/>
+		<input type="button"  value="灰色"  id="bt6"/>
+		<br />
+		--------------------------------------------------------------------------<br />
+		第三种：用style更改样式属性<br />
+		<input type="button"  value="黄色"  id="bt7"/>
+		<input type="button"  value="绿色"  id="bt8"/>
+		<input type="button"  value="灰色"  id="bt9"/>
+		<br />
+		--------------------------------------------------------------------------<br />
+		第四种：使用link的方式<br />
+		<input type="button"  value="粉色"  id="link1"/>
+		<input type="button"  value="绿色"  id="link2"/>
+		<input type="button"  value="黄色"  id="link3"/>
+		<br />
+	</body>
+</html>

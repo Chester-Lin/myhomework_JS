@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1,#box2,#box3{
+				width: 200px;height: 200px;background: blue;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var box1= document.getElementById('box1');
+				var box2= document.getElementById('box2');
+				var box3= document.getElementById('box3');
+				
+				box1.onclick=function(){
+					this.style.background="pink";
+					alert(this.innerHTML);
+					this.innerHTML="你是一个好人啊";
+				}
+				box2.onclick=function(){
+					this.style.background="pink";
+					alert(this.innerHTML);
+					this.innerHTML="这是不是有问题";
+				}
+				box3.onclick=function(){
+					this.style.background="pink";
+					alert(this.innerHTML);
+					this.innerHTML="你是来搞笑的嘛？";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1">这是第一个div</div><br />
+		<div id="box2">这是第二个div</div><br />
+		<div id="box3">这是第三个div</div>
+
+	</body>
+</html>

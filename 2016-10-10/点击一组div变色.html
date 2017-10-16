@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				background: #666;
+				float: left;
+				margin-right:10px;
+				color: #fff;
+				font-size: 40px;
+                }
+
+		</style>
+		<script>
+			window.onload=function(){
+				/*var allDiv=document.getElementsByTagName('div');
+				for(var i=0;i<allDiv.length;i++){
+					allDiv[i].onclick=function(){
+						  this.style.background="blue";
+					}
+				}*/
+				
+				var allDiv=document.getElementsByTagName('div');
+				allDiv[0].onclick=function(){
+					this.style.background="yellow";
+				}
+				allDiv[1].onclick=function(){
+					this.style.background="yellow";
+				}
+				allDiv[2].onclick=function(){
+					this.style.background="yellow";
+				}
+				
+				
+				
+				var classDiv=document.getElementsByClassName('aaa');
+				for(var i=0;i<classDiv.length;i++){
+					classDiv[i].onclick=function(){
+						  this.style.background="pink";
+					}
+				}
+				
+				document.getElementById('q').onclick=function(){
+					this.style.background="green";
+				}
+				document.getElementById('w').onclick=function(){
+					this.style.background="green";
+				}
+				document.getElementById('e').onclick=function(){
+					this.style.background="green";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		<br />
+		<br />
+			<div class="aaa">a</div>
+			<div class="aaa">b</div>
+			<div class="aaa">c</div>
+		<br />
+		<br />
+			<div id="q">Q</div>
+			<div id="w">W</div>
+			<div id="e">E</div>
+		
+		
+	</body>
+</html>

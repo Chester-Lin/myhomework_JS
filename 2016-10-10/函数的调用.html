@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var bt1=document.getElementById('bt1');
+				bt1.onclick=function(){
+					test1();
+				}
+				bt2.onclick=function(){
+					test2();
+				}
+				bt3.onclick=function(){
+					test3();
+				}
+			}
+			function test1(){
+				alert('调用测试1');
+			}
+			function test2(){
+				alert('调用测试2');
+			}
+			function test3(){
+				alert('调用测试3');
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="调用测试1" id='bt1'/>
+		<input type="button" value="调用测试2" id='bt2'/>
+		<input type="button" value="调用测试3" id='bt3'/>
+	</body>
+</html>
