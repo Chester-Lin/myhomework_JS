@@ -1,99 +1,99 @@
-|------JS�ĸ���
-         javascript :һ�ֽű����ԣ�д������д��Ч����������������ʽ��
+|------JS的概念
+         javascript :一种脚本语言，写动画，写特效，做交互（操作样式）
 
-         ��Ϊ�������֣�
-               1.ECMAScript : ���������﷨��
-               2.BOM : ���������ģ��
-               3.DOM : �ĵ�����ģ��
+         分为三个部分：
+               1.ECMAScript : 解释器，语法；
+               2.BOM : 浏览器对象模型
+               3.DOM : 文档对象模型
 
 
-|------JS�����﷨��ʽ����
-        <input type="button" value="��ť" onclick="alert('1')"/>
+|------JS基础语法格式介绍
+        <input type="button" value="按钮" onclick="alert('1')"/>
 
-           = : ��ֵ���ұߵ�ֵ�������
-           == : �Ƚ�����ֵ
-           === : �Ƚ�����ֵ������
+           = : 赋值，右边的值赋给左边
+           == : 比较字面值
+           === : 比较字面值和类型
            
-           on : �ڡ�������
-           click : ���
-           alert() : ����  ()�����з���Ҫ����������
+           on : 在……上面
+           click : 点击
+           alert() : 弹出  ()括号中放需要弹出的内容
 
-<input type="button" value="��¼" onclick="document.getElementById('box').style.display='block';"/>
+       <input type="button" value="登录" onclick="document.getElementById('box').style.display='block';"/>
 
-            document : �ĵ�
-            .        :    ��
-            get      :  ��ȡ
-            Element  :  Ԫ��
-            By       :  ͨ��
+            document : 文档
+            .        :    的
+            get      :  获取
+            Element  :  元素
+            By       :  通过
             Id       :  id
 
-������������ .style�����Ķ�������ʽ
+！！！！！！ .style操作的都是行内式
 
-document.getElementById("box"):�������ĵ�����ͨ��id��ȡһ��idΪbox��Ԫ��
+document.getElementById("box"):在整个文档里面通过id获取一个id为box的元素
 
 
-С�ܽ᣺  
-           1.js�����κ���ʽ�������޸�
-           2.�κ�Ԫ�ض����Լ�ʱ��
-           3.�¼����׼Ӹ�˭������˭�ͼӸ�˭
-           4.�޸���ʽ��ôд��css��ôд��js����ôд
+小总结：  
+           1.js里面任何样式都可以修改
+           2.任何元素都可以加时间
+           3.事件到底加给谁：操作谁就加给谁
+           4.修改样式怎么写：css怎么写，js就怎么写
 
-|----------����:function
-      ������Ϊ�������裺����͵��ã�ȱһ����
+|----------函数:function
+      函数分为两个步骤：定义和调用，缺一不可
 
-     1.�����Ķ��壺
+     1.函数的定义：
                   function show(){
-                        //����;
+                        //代码;
                   }
-     2.�����ĵ��ã���������С���ţ�������ֻҪ�����Ż�����ִ��
+     2.函数的调用：函数名加小括号，函数名只要加括号会马上执行
                  show();
 
-     window.onload:  ��ҳ��������֮����ִ�У�һ��д��ҳ���ʼ��������
+     window.onload:  当页面加载完成之后再执行（一般写成页面初始化方法）
 
-|------------����
-     ���������൱�ڸ�ĳ��Ԫ�ػ���ĳ�仰��һ�����
-     ������ʽ��var ����� = ���ֵ;
+|------------变量
+     变量：就相当于给某个元素或者某句话起一个外号
+     变量格式：var 外号名 = 外号值;
 
-|------------�ж�if else
-     if(����){
-           ��������ִ�е����;
+|------------判断if else
+     if(条件){
+           条件成立执行的语句;
      } else {
-           ����������ִ�е����;
+           条件不成立执行的语句;
      }
-     ������
-     if(�аײ�){
-           ��ײ�;
+     举例：
+     if(有白菜){
+           买白菜;
      } else {
-           ������;
+           买其他;
      }
 
-|--------------����css��ʽ�����ַ���
+|--------------更改css样式的三种方法
       
-      1.�ı�class����   class==��className
-      2.�ı�css��ʽ     Ԫ��.style.��ʽ=ֵ
-      3.�ı�linkֵ��ʵ�ʾ��Ǹı�href��   �Ƽ�ʹ��;
+      1.改变class名称   class==》className
+      2.改变css样式     元素.style.样式=值
+      3.改变link值（实质就是改变href）   推荐使用;
 
 
-С�ܽ᣺ 
-      1. ��JS����class��JS��һ�������֣�����ֱ��ʹ�ã���className
-      2. body�ļ�д��document.body  ��ע�⣺ bodyҳ��ֻ��һ����
-      3. this==>��ǰ�����¼���Ԫ��
-      4. innerHTML==>Ԫ�ص����ݣ��������Ի�ȡ������������[��ֵ]
-      5. length : ���ȣ�����
-      6. ͨ����ǩ����ȡһ��Ԫ��[��ȡ�����ǲ�ֹһ��,���Ԫ��];һ����߶��Ԫ��Ҫ����±�ʹ��;
+小总结： 
+      1. 在JS里面class是JS的一个保留字，不能直接使用，用className
+      2. body的简写：document.body  【注意： body页面只有一个】
+      3. this==>当前发生事件的元素
+      4. innerHTML==>元素的内容，不但可以获取，还可以设置[赋值]
+      5. length : 长度，个数
+      6. 通过标签名获取一组元素[获取到的是不止一个,多个元素];一组或者多个元素要配合下标使用;
         document.getELementsByTagName(tagname);
-	aDiv[0]��
-	������0��ʼ;�±꣺[number]
-      7. i++ ��ͬ�� i = i + 1
-      8. a��ǩ��href�� href="javascript:;"
-      9. autofocus: ������Զ��۽�;
+	aDiv[0]：
+	计数从0开始;下标：[number]
+      7. i++ 等同于 i = i + 1
+      8. a标签的href： href="javascript:;"
+      9. autofocus: 输入框自动聚焦;
 
-    **10. ͨ���¼����õĺ�����������
-       ���ͣ�
-��ʽһ��
+    **10. 通过事件调用的函数不加括号
+       解释：
+方式一：
         <div onclick="fun1();fun2('world!');"></div>
-��ʽ����
-        <div id="a">����</div>
+方式二：
+        <div id="a">点我</div>
 	document.getElementById("a").onclick=fun1;   
 
     function fun1(){
@@ -102,8 +102,11 @@ document.getElementById("box"):�������ĵ�����ͨ��id��ȡһ��idΪbox��Ԫ��
     function fun2(cc){
         alert(cc);
     }
-��ʽһ��onclick�¼�����html��д�ģ�����ʽ����onclick�¼�����script��д�ģ���������Ҫ������
-onclick�¼������html��д�Ļ��������ڴ���Ҫִ�еĴ��룬�������žͲ������Ҫִ�е��Ǹ�������onclick�¼���scriptд�Ļ�������������žʹ�������������ķ���ֱֵ�Ӹ�����onclick�¼���Ҳ����˵ҳ��ֱ�ӻᴥ��onclick��Ч��������Ҫ���������Ȼ����������Ҫ��Ч����������Ҫ��Ч���ǵ������Ч������Ҫ�����������ֵ�����onclick���ԣ������Ƿ���ֵ��������script�ڵ�onclick�¼���Ӧ�ü����ţ�����html�ڵ�onlick�¼���Ҫ�����ŵġ�
+方式一的onclick事件是在html内写的，而方式二的onclick事件是在script中写的，这是最主要的区别。
+onclick事件如果在html内写的话，引号内代表要执行的代码，不加括号就不会调用要执行的那个函数。
+onclick事件在script写的话，如果加了括号就代表将这个函数的返回值直接赋给了onclick事件，也就是说页面直接会触发onclick的效果，不需要点击。
+这显然不是我们想要的效果，我们想要的效果是点击触发效果，是要将这个函数赋值给这个onclick属性，而不是返回值。
+所以在script内的onclick事件不应该加括号，而在html内的onlick事件是要加括号的。
 
 
 
