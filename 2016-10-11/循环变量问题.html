@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				div {
+					width: 100px;
+					height: 100px;
+					background: green;
+					float: left;
+					margin: 10px;
+				}
+		</style>
+		<script>
+			
+			/*for(i=0;i<5;i++){
+				console.log(i);
+				for (i=7;i<10,j++) {
+					console.log(i);
+				}
+			}*/
+			
+			/*for(i=0;i<5;i++){
+				console.log(i);
+				
+				for (j=7;j<10;j++ ){
+					console.log(j);
+				}
+			}*/
+			
+			/*window.onload=function(){
+					var allDiv=document.getElementsByTagName("div");
+					alert(allDiv.length)
+					for (i=0;i<allDiv.length;i++) {
+						console.log(i);
+						
+						allDiv[i].onclick=function() {
+							    for (i=0;i<allDiv.length;i++) {
+							    	allDiv[i].style.background="green";
+							    }
+							    this.style.background="red";
+						}						
+					}
+			}*/
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<div></div><div></div><div></div><div></div>
+	</body>
+	<script>
+		/*window.onload=function(){
+				var allDiv=document.getElementsByTagName("div");
+				alert(allDiv.length)
+				var i=0;
+				while (i<allDiv.length){
+					allDiv[i].onclick=function(){
+						var i=0;
+						while (i<allDiv.length){
+							allDiv[i].style.background="green";
+							i++;
+						}
+						this.style.background="red";
+					}
+					i++;
+				}
+		}*/
+		
+		var allDiv=document.getElementsByTagName("div");
+		var i=0;
+		while (i<allDiv.length){
+			allDiv[i].onclick=function(){
+				var i=0;
+				while (i<allDiv.length){
+					allDiv[i].style.background="green";
+					i++;
+				}
+				this.style.background="yellow";
+			}
+			i++;
+		}
+		
+	</script>
+</html>

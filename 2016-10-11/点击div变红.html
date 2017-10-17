@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				div {
+					width: 100px;
+					height: 100px;
+					background: green;
+					float: left;
+					margin: 10px;
+				}
+		</style>
+		<script>
+			window.onload=function(){
+				var allDiv=document.getElementsByTagName("div");
+				
+				/*for(i=0;i<allDiv.length;i++){
+					allDiv[i].onclick=function(){
+						 this.style.background="red";
+					}
+				}*/
+				
+				
+				
+				
+				/*for( j=0;j<allDiv.length;j++  ){
+					allDiv[j].onclick=function(){
+						this.style.background="blue";
+					}
+				}*/
+				
+				
+				
+				
+				/*for ( k=0;k<allDiv.length;k++ ){
+					allDiv[k].onclick=function(){
+						this.style.background="yellow";
+					}
+				}*/
+				
+				
+				
+				
+				
+				//-----------------------------升级版 以及   while
+				/*for ( i=0;i<allDiv.length;i++ ){
+					allDiv[i].onclick=function(){
+						
+						for( a=0;a<allDiv.length;a++ ){
+							allDiv[a].style.background="green";
+						}
+						this.style.background="red";
+						
+					}
+				}*/
+				
+				
+				/*var i=0;
+				while(i<allDiv.length){
+					allDiv[i].onclick=function(){
+						   for( a=0;a<allDiv.length;a++ ){
+						   	       allDiv[a].style.background="green";
+						   }
+						   this.style.background="red";
+					}
+					i++;
+				}*/
+				
+				/*var i=0;
+				while(i<allDiv.length){
+					   allDiv[i].onclick=function(){
+					   	          var j=0;
+					   	          while(j<allDiv.length){
+					   	          	allDiv[j].style.background="green";
+					   	          	j++;
+					   	          }
+					   	          this.style.background="red";
+					   }
+					   i++;
+				}*/
+				
+				/*var a=0;
+				var b=0;
+			    while (a<allDiv.length){
+			    	allDiv[a].onclick=function(){ 		
+			    		while(b<allDiv.length){
+			    			allDiv[b].style.background="green";
+			    			b++;
+			    		}
+			    		b=0;
+			    		this.style.background="red";		
+			    	}
+			    	a++;
+			    }*/
+			   
+			   
+				
+				
+				
+				/*var i=0;
+				var j=0;
+				while (  i<allDiv.length   ){
+					  allDiv[i].onclick=function(){
+					  	     while (j<allDiv.length){
+					  	     	allDiv[j].style.background="green";
+					  	     	j++
+					  	     }
+					  	     j=0;
+					  	     this.style.background="red";     
+					  }
+					  i++;
+				}*/
+				
+				
+				var i=0;
+				while (i<allDiv.length){
+					allDiv[i].onclick=function(){
+						var j=0;
+						while (j<allDiv.length){
+							allDiv[j].style.background="green";
+							j++;
+						}
+						this.style.background="red";
+					}
+					i++;
+				}
+				
+				
+			}
+		</script>
+
+	</head>
+	<body>
+		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	</body>
+</html>

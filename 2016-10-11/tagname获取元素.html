@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+				color: #FFFFFF;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var allDiv=document.getElementsByTagName('div');
+				/*allDiv[0].onclick=function(){
+					alert(this.innerHTML);
+				}
+				allDiv[1].onclick=function(){
+					alert(this.innerHTML);
+				}
+				allDiv[2].onclick=function(){
+					alert(this.innerHTML);
+				}*/
+				for(i=0;i<allDiv.length;i++){
+					allDiv[i].onclick=function(){
+						alert(this.innerHTML);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>这是div1啊</div><br />
+		<div>这是div2啊</div><br />
+		<div>这是div3啊</div>
+	</body>
+</html>

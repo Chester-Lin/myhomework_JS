@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{width: 200px;height: 200px;background: red;}
+		</style>
+		<script>
+			window.onload=function(){
+				/*var allA=document.getElementsByTagName("a");
+				for (var i=0;i< allA.length;i++) {
+					alert(this.aa);
+				}*/
+				
+				
+				/*var allA=document.getElementsByTagName("a");
+				for(var i=0;i<allA.length;i++){
+					allA[i].onclick=function(){
+						alert(this.aa);
+					}
+				}*/
+				
+				var allA=document.getElementsByTagName("a");
+				for(var i=0;i<allA.length;i++){
+					allA[i].index=i;
+					allA[i].onclick=function(){
+						//alert(this.title);
+						alert(this.index);
+					}
+				}
+				
+				var allDiv=document.getElementsByTagName("div");
+				for(var i=0;i<allDiv.length;i++){
+					allDiv[i].aa=i;
+					allDiv[i].onclick=function(){
+						//alert(this.title);
+						alert(this.aa);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href="javascript:;" aa="0" title="0">asd</a>
+		<a href="javascript:;" aa="1" title="1">asd</a>
+		<a href="javascript:;" aa="2" title="2">asd</a>
+		
+		<div>div1</div>
+	    <div>div2</div>
+	    <div>div3</div>
+
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				div {
+					width: 100px;
+					height: 100px;
+					background: red;
+					float: left;
+					margin-right: 10px;
+				}
+		</style>
+		<script>
+			window.onload=function(){
+				var allDiv=document.getElementsByTagName('div');
+//-----------------------for循环
+					/*for(i=0;i<allDiv.length;i++){
+						allDiv[i].onclick=function(){
+							alert(i);
+						}*/
+					
+					/*for(j=0;j<allDiv.length;j++){
+						allDiv[j].onclick=function(){
+							alert(j);
+						}*/
+						
+					/*for (k=0;k<allDiv.length;k++){
+						console.log(k);*/
+						
+//-------------------------while循环
+                      /*var i=0;
+                      while(i<allDiv.length){
+                      	allDiv[i].onclick=function(){
+                      		alert(i);
+                      	}
+				        i++;
+				      }*/
+				     
+				     /*var j=0;
+				     while(j<allDiv.length){
+				     	allDiv[j].onclick=function(){
+				     		alert(j);
+				     	}
+				     	j++;
+				     }*/
+				    
+				    var k=100;
+				    while(k>90){
+				    	console.log(k);
+				    	k--;
+				    }
+				    
+				     
+			}
+		</script>
+
+	</head>
+	<body>
+		<div></div><div></div><div></div>
+	</body>
+</html>
