@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<input type="button" value="全选" name="but"/>
+		<input type="button" value="不选" name="but"/>
+		<input type="button" value="反选" name="but"/>
+		<hr/>
+		<input type="checkbox" name="box"/>
+		<input type="checkbox" name="box"/>
+		<input type="checkbox" name="box"/>
+		<input type="checkbox" name="box"/>
+		<input type="checkbox" name="box"/>
+	</body>
+	<script>
+			/*window.onload = function(){
+				var aInput = document.getElementsByTagName('input');
+				
+				aInput[0].onclick = function(){
+					for(var i = 3; i < aInput.length; i++){
+						aInput[i].checked = true;	
+					}
+				}
+				
+				aInput[1].onclick = function(){
+					for(var i = 3; i < aInput.length; i++){
+						aInput[i].checked = false;	
+					}	
+				}
+				
+				aInput[2].onclick = function(){
+					for(var i = 3; i < aInput.length; i++){
+						if(aInput[i].checked == true){
+							aInput[i].checked = false;	
+						}else{
+							aInput[i].checked = true;
+						}	
+					}
+				}
+			}*/
+/*			var aBut=document.getElementsByName("but");
+			var aBox=document.getElementsByName("box");
+			
+			aBut[0].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      aBox[i].checked=true;
+				  }
+			}
+			aBut[1].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      aBox[i].checked=false;
+				  }
+			}
+			aBut[2].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      if(  aBox[i].checked==true ){
+				  	      	    aBox[i].checked=false;
+				  	      }else{
+				  	      	   aBox[i].checked=true;
+				  	      }
+				  }
+			}*/
+			
+			var aBut=document.getElementsByName("but");
+			var aBox=document.getElementsByName("box");
+			
+			aBut[0].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      aBox[i].checked=true;
+				  }
+			}
+			aBut[1].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      aBox[i].checked=false;
+				  }
+			}
+			aBut[2].onclick=function(){
+				  for(var i=0;i<aBox.length;i++){
+				  	      aBox[i].checked=!aBox[i].checked;
+				  }
+			}
+			
+			
+
+		
+	</script>
+</html>

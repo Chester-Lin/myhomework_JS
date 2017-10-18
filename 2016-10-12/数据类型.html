@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+
+	<body>
+		<div id="id1" name="name1"></div>
+	</body>
+		<script>
+		 //数字number
+			var a = 12;
+			document.writeln("var a = 12;数据类型是   "+typeof a+"<br />");
+			var aa=15;
+			document.writeln("var aa=15;数据类型    "+typeof aa+"<br />");
+			var aaa=20;
+			document.writeln("var aaa=20;数据类型    "+typeof aaa+"<br />");
+		document.writeln("<br /><br /><br />");
+		
+		
+	    //string 
+			var b = '12';
+			document.writeln("var b = '12';数据类型是   "+typeof b+"<br />");
+			var bb="123";
+			document.writeln("var bb='123';数据类型是    "+typeof bb+"<br />");
+			var bbb='111111';
+			document.writeln("var bbb='111111';  数据类型是    "+typeof bbb+"<br />");
+		document.writeln("<br /><br /><br />");	
+		
+		
+		//function	
+			var c = function show(){
+						alert('1');
+					}
+            document.writeln("var c = function show(){alert('1');}数据类型是   "+typeof c+"<br />");
+            var cc=function test(){
+            	        alert('2');
+            }
+            document.writeln("var cc=function test(){alert('2');}   数据类型是   "+typeof  cc+"<br />");
+            var ccc=function qqq(){
+            	        alert('3');
+            }
+            document.writeln("var ccc=function qqq(){alert('3');}   数据类型是  "+typeof ccc+"<br />");
+         document.writeln("<br /><br /><br />");	
+         
+         
+         
+         //undefined
+            var d = undefined;
+            document.writeln(" var d = undefined;数据类型是  "+typeof d+"<br />");
+            var dd=undefined;
+            document.writeln("var dd=undefined;数据类型是   "+typeof dd+"<br />");
+            var ddd=undefined;
+            document.writeln("var ddd=undefined;数据类型是   "+typeof ddd+"<br />")
+          document.writeln("<br /><br /><br />");
+          
+          
+         //boolean
+            var t =true;
+            var f=false;
+            document.writeln("var t =true;   var f=false;  数据类型是   "+typeof t+"    "+typeof f+"<br />");
+            var z =true;
+            var y=false;
+            document.writeln("var z=true;   var y=false;  数据类型是   "+typeof z+"    "+typeof y+"<br />");
+          document.writeln("<br /><br /><br />");  
+          
+          
+         //object   
+				var oDiv = document.getElementsByTagName('div')[0];
+				document.writeln("oDiv的数据类型是  "+typeof oDiv+"<br />");
+				var id1= document.getElementById('id1');
+				document.writeln("id1的数据类型是  "+typeof id1+"<br />");
+				var name1=document.getElementsByName("name1")[0];
+				document.writeln("name1的数据类型是  "+typeof name1+"<br />");
+
+	</script>
+</html>
