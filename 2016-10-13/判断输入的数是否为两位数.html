@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt"/>
+		<input type="button" value="按钮" id="btn" />
+
+		
+		
+		<script>
+			var  btn=document.getElementById("btn");
+			var txt=document.getElementById("txt");
+			
+			btn.onclick=function(){
+				var  oval=txt.value;
+				if ( oval>=10 && oval<100  ) {
+					     alert("这是一个两位数");
+				} else{
+					     alert("不是一个两位数");
+				}
+				
+			}
+			
+		</script>
+		
+	</body>
+</html>

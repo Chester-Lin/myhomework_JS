@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*var a=10;//全局变量
+			function aaa(){
+				alert(a);
+			}
+			aaa();
+			
+			var a=10;//全局变量
+			function aaa(){
+				alert(a);
+			}
+			aaa();*/
+			
+			a=10;//全局变量
+			function aaa(){
+				alert(a);
+			}
+			aaa();
+			
+			/*function  bbb(){
+				var b=10;   //局部变量
+			}
+			function test(){
+				alert(b);
+			}
+			test();*/
+			
+			function  bbb(){
+				b=50;   //局部变量改成全局去掉var
+			}
+			function test(){
+				alert(b);
+			}
+			bbb();
+			test();
+			
+			
+			
+		</script>
+	</body>
+</html>

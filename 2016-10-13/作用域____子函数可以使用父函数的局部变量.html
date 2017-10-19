@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<script>
+				//闭包:子函数可以使用父函数的局部变量;
+				/*function show1(){
+					var a = 12;
+					function show2(){
+						alert(a);	
+					}
+					show2();
+				}
+				show1();*/
+				
+				
+				/*function  aaa1(){
+					  var aaa=10;
+					  function aaa2(){
+					  	alert(aaa);
+					  }
+					  aaa2();
+				}
+				aaa1();
+				
+				function  bbb1(){
+					  var bbb=200;
+					  function bbb2(){
+					  	alert(bbb);
+					  }
+					  bbb2();
+				}
+				bbb1();*/
+				
+//变量遮蔽：子函数的局部变量和全局变量如果重名,不会覆盖,只会遮蔽,会就近选择;
+				/*var a = 12;
+				function show(){
+					var a = 5;
+					alert(a);
+				}
+				alert(a);
+				show();
+				alert(a);*/
+				
+				
+				/*var b=10;
+				function test(){
+					  var b=15;
+					  alert(b);
+				}
+				alert(b);
+				test();*/
+				
+				var c=100;
+				var c=150;
+				function ccc(){
+					var c=200;
+					alert(c);
+				}
+				alert(c);
+				ccc();
+
+				
+	</script>
+
+	</body>
+</html>
