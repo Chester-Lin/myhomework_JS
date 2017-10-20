@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				#box {
+					width: 200px;
+					height: 200px;
+					background: red;
+				}
+		</style>
+		<script>
+			  function rnd(n,m){
+			  	   return  parseInt(Math.random() * (m-n)+n  );
+			  }
+			  /*window.onload=function(){
+			  	   var box=document.getElementById("box");
+			  	   box.onclick=function(){
+			  	   	      var r= rnd(  0  ,   256  );
+			  	   	      this.style.background=  "  rgb(  "+r+" ,   "+r+" ,   "+r+"      )   ";
+			  	   }
+			  }*/
+			 
+			 //升级版
+			 
+			 window.onload=function(){
+			 	var box=document.getElementById("box");
+			 	box.onclick=function(){
+	 		
+			 		    	   /*r1=rnd(0,256);
+			 		    	   r2=rnd(0,256);
+			 		    	   r3=rnd(0,256);*/
+			 		    	  var r=new Array(3);
+			 		    	  for (  var i=0;i<3;i++   ) {
+			 		    	  	     r[i]=rnd( 0, 256 );
+			 		    	  	     r.push(r[i]);
+			 		    	  }
+			 		    	   
+			 		    	   
+			 		    	   
+			 		    	   this.style.background="  rgb( "+r[1]+"  ,  "+r[2]+"     ,   "+r[3]+" )   ";
+   
+			 	}
+			 }
+		</script>
+
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

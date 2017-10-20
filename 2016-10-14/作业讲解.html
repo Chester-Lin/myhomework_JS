@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		window.onload=function(){
+			var btn = document.getElementById("btn");
+		
+			btn.onclick=function(){
+				var text1=document.getElementById("text1").value;
+				var text2=document.getElementById("text2").value;
+				var sel=document.getElementById("sel").value;
+				
+					alert("结果的数据类型是"+typeof  (text1+sel+text2) +"  运算结果是   " +  eval(text1+sel+text2) );
+				
+			}
+			
+		}
+		
+	</script>
+	<body>
+		
+		<input type="text" id="text1"/>
+		<select id="sel">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		
+		<input type="text" id="text2"/>
+		<input type="button" id="btn" value="运算"/>
+	</body>
+	
+	<script>
+		/*var btn = document.getElementById("btn");
+		
+		btn.onclick=function(){
+			var text1=document.getElementById("text1").value;
+			var text2=document.getElementById("text2").value;
+			var sel=document.getElementById("sel").value;
+			
+				alert("结果的数据类型是"+typeof  (text1+sel+text2) +"  运算结果是   " +  eval(text1+sel+text2) );
+			
+		}*/
+		
+		/*var btn = document.getElementById("btn");
+		
+		btn.onclick=function(){
+			var text1=document.getElementById("text1").value;
+			var text2=document.getElementById("text2").value;
+			var sel=document.getElementById("sel").value;
+			
+				alert("结果的数据类型是"+typeof  (text1+sel+text2) +"  运算结果是   " +  eval(text1+sel+text2) );
+			
+		}*/
+		
+	</script>
+</html>

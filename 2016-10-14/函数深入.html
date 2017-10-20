@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//函数调用
+		
+
+		/*function aaa(){
+			alert(1);
+			
+		}
+		alert(aaa());
+		
+		function  bbb(){
+			  alert(2);
+		}
+		alert(bbb());
+		
+		function  ccc(){
+			 alert(3);
+		}
+		alert(ccc());*/
+		
+//return
+		/*function aaa(){
+			alert(1);
+			return 0;
+		}
+		alert(aaa());
+		
+		function bbb(){
+			alert(2);
+			return 0;
+		}
+		alert(bbb());
+		
+		function ccc(){
+			alert(3);
+			return 0;
+		}
+		alert(ccc());*/
+		
+//return 一个函数		
+		/*function aaa(){
+			alert(1);
+			return function(){
+				alert(2);
+			}
+		}
+		alert(aaa());
+		
+		function bbb(){
+			alert(1);
+			return "aaa";
+		}
+		alert(bbb());
+		
+		function test(){
+			alert("qqq");
+		}
+		function aaa(){
+			alert(1);
+			return test();
+		}
+		aaa();*/
+		
+//函数参数传递		
+		/*function show(a){
+			//alert(1);
+			return function(b){
+				//alert(2);
+				return function(c){
+					return a+b+c;
+				}
+			};
+		}
+		alert(show(1)(2)(3));
+
+		function show(a) {
+			return function(b) {
+				return function(c) {
+					return a+b+c;
+				}
+			};
+		}
+		alert(show(10)(20)(30));
+		
+		function show(a) {
+			return function(b) {
+				return function(c) {
+					return a+b+c;
+				}
+			};
+		}
+		alert(show(10)(20)(30));*/
+
+//不加括号 返回的是整个方法
+		/*function aaa(){
+			return 1;
+		}
+		var a = aaa;
+		alert(a);
+		
+		function aaa(){
+			return 1;
+		}
+		var a = aaa;
+		alert(a);*/
+		
+		function aaa(){
+			return 1;
+		}
+		var a = aaa;
+		alert(a);
+
+//加括号会执行方法
+		/*function test(){
+			return 1;
+		}
+		var b = test();
+		alert(b);
+		
+		function test(){
+			return 1;
+		}
+		var b = test();
+		alert(b);*/
+		
+		function test(){
+			return 1;
+		}
+		var b = test();
+		alert(b);
+
+	</script>
+</html>

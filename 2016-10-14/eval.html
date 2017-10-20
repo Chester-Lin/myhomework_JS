@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="text1"/>
+		<input type="button" value="按钮" id="btn"/>
+		<script>
+			
+			var text1 = document.getElementById("text1").value;
+			var btn = document.getElementById("btn");
+			btn.onclick=function(){
+				alert(  text1  );
+				alert(  eval(text1)  );
+				
+			}
+			
+			
+			var a = 'function show(){  document.writeln("<br /><br />1<br />") }';
+			eval(a);
+			show();
+			
+			var b = "  function test(){  document.writeln('2<br />')  }   ";
+			eval(b);
+			test();
+			
+			/*var c = "  function aaa(){  document.writeln('3<br />')  }   ";
+			//eval(c);
+			aaa();*/
+			
+			var str = '12+3';
+			document.writeln(eval(str)+"<br />");
+			
+			var str1= '15-5';
+			document.writeln(eval(str1)+"<br />");
+			
+			var str2= '15*5';
+			document.writeln(eval(str2)+"<br />");
+			
+			
+			/*var str = '[1,3,4,5,2]';
+			alert(eval(str)[0]);
+			
+			var str1=new Array(5,6,7);
+			alert(eval(str1)[0]);
+			
+			var str2=[8,7,6];
+			alert(eval(str2)[0]);*/
+
+		</script>
+	</body>
+</html>

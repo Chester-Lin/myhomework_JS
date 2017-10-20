@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 400px;
+				height: 400px;
+				background: red;	
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="box" style="width: 200px; height: 200px; background: blue;"></div>
+	</body>
+	<script>
+		var oBox = document.getElementById('box');
+		
+		
+		//方法一：直接用style获取
+		document.writeln("方法一：直接用style获取<br />");
+		
+
+     	document.writeln("oBox.style.width值为"+oBox.style.width+"<br />");
+     	document.writeln("oBox.style.height值为"+oBox.style.height+"<br />");
+     	document.writeln("oBox.style.background值为"+oBox.style.background+"<br /><br /><br />");
+     	
+     	//方法二：直接用currentStyle获取
+     	document.writeln("方法二：直接用currentStyle获取<br />");
+     	
+     	//document.writeln("oBox.currentStyle.background值为"+oBox.currentStyle.background+"<br />");
+     	//document.writeln("oBox.currentStyle.width值为"+oBox.currentStyle.width+"<br />");
+
+       document.writeln("<br />");
+
+       //方法三：用getComputedStyle(oBox,false)获取
+       document.writeln("方法三：用getComputedStyle(oBox,false)获取<br />");
+       document.writeln("getComputedStyle(oBox,false).width值为"+getComputedStyle(oBox,false).width+"<br />");
+       document.writeln("getComputedStyle(oBox,false).height值为"+getComputedStyle(oBox,false).height+"<br />");
+       document.writeln("getComputedStyle(oBox,false).background值为"+getComputedStyle(oBox,false).background+"<br />");
+
+       //方法四：传参方式获取
+       document.writeln("方法四：传参方式获取<br />");
+       function getStyle(obj,attr){
+       	           if (  obj.currentStyle  ) {
+       	           	                return  obj.currentStyle[attr];
+       	           } else{
+       	           	                return   getComputedStyle(obj,false)[attr];
+       	           }
+       }
+       document.writeln("传参获取数据width"+getStyle(oBox,'width')+"<br />");
+       document.writeln("传参获取数据height"+getStyle(oBox,'height')+"<br />");
+       document.writeln("传参获取数据background"+getStyle(oBox,'background')+"<br />");
+       
+	</script>
+</html>
