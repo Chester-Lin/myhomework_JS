@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn" />
+		<script>
+			/*function show (){
+				var a = 12;
+				alert(a);
+			}
+			show();*/
+			
+			/*function  aaa(){
+				 var b=10;
+				 return alert("1");
+				 alert(b);
+			}
+			aaa();*/
+			
+			/*function show (){
+				  var c=5;
+				  alert(c);
+				  return 1;
+			}
+			alert(show());
+			
+			function  aaa(){
+				   var aaa=100;
+				   alert(aaa);
+			}
+			alert(aaa());
+			
+			function  bbb(){
+				 var bbb=200;
+				 alert(bbb);
+				 return 1;
+			}
+			alert(bbb());*/
+			
+			
+			/*function show (a,b){
+				alert(a);
+				return 1;
+				alert(b);
+			}
+			show(10,20);*/
+			
+			var btn = document.getElementById("btn");
+			btn.onclick= test();
+			   function   test(){
+			   	     return function(){
+					   	   alert(1);
+					   }
+			   }
+			   
+			   
+			   function aaa(){
+					alert(1);
+					return function(){
+						alert("2");
+					}
+				}
+				alert(aaa());
+
+		</script>
+	</body>
+</html>

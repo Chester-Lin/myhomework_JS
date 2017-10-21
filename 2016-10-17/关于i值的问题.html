@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="按钮1" />
+		<input type="button" value="按钮2" />
+		<input type="button" value="按钮3" />
+		
+		<script>
+			var aBtn = document.getElementsByTagName("input");
+			
+			
+			//因为最后i的值为3  每个按钮绑定的事件是输出i
+			/*for ( var i = 0 ; i <aBtn.length ; i++   ) {
+				        aBtn[i].onclick=function(){
+				        	       alert(i);
+				        }
+			}*/
+			
+			//循环前已经给每个按钮赋值index
+			/*for (  var i = 0 ; i < aBtn.length ; i++ ) {
+			            	aBtn[i].index=i;
+			            	
+				           aBtn[i].onclick=function(){				           	      
+				           	      alert(this.index);
+				           }
+			}*/
+			/*for (  var i = 0 ; i < aBtn.length ; i++   ) {
+				            aBtn[i].index=i;
+				             
+				             aBtn[i].onclick=function(){
+				                  alert(this.index);
+				             }
+			}*/
+			
+			//传参方式
+			/*for (  var i=0;i<aBtn.length;i++ ) {
+				      function  show (a){
+				      	      aBtn[i].onclick=function(){
+				      	      	   alert(a);
+				      	      }
+				      }
+				      show(i);
+			}*/
+			
+			/*for (  var i=0;i<aBtn.length;i++   ) {
+				    (function (a){
+				    	    aBtn[i].onclick=function(){
+				    	    	   alert(a);
+				    	    }
+				    })(i);
+			}*/
+			
+			for (  var i=0;i<aBtn.length;i++  ) {
+				      (function(a){
+				      	    aBtn[i].onclick=function(){
+				      	    	  alert(a);
+				      	    }
+				      })(i);
+			}
+			
+			
+		</script>
+
+	</body>
+</html>
