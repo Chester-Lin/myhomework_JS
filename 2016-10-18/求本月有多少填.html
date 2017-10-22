@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//求出本月有多少天，假设本月就是10月;
+		var oDate = new Date();
+		oDate.setMonth(oDate.getMonth() +1);//11月份;
+		oDate.setDate(0);//10月的最后一天;
+		alert(oDate.getDate());
+		</script>
+
+	</body>
+</html>

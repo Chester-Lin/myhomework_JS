@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+			#box {
+				width: 300px;
+				height: 300px;
+				border: #000 1px solid;
+				margin: 100px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			#box img {
+				position:absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#box a {
+				display: block;
+				width: 300px;
+				height: 150px;
+				z-index: 999;
+				left: 0;
+				background: red;
+				position: absolute;
+				opacity: 0;
+			}
+			
+			#up {
+				top: 0;
+			}
+			
+			#down {
+				bottom: 0;
+			}
+		</style>
+
+	<body>
+		<div id="box">
+				<a href="javascript:;" id="up"></a>
+				<img src="tu.jpg" alt="" id="img" />
+				<a href="javascript:;" id="down"></a>
+		</div>
+		
+
+	</body>
+	<script>
+		      var box = document.getElementById("box");
+		      var up  = document.getElementById("up");
+		      var down= document.getElementById("down");
+		      var img = document.getElementById("img");
+		      
+		      var count = 0;
+		      var timer = null;
+		      up.onmouseover=function(){
+		      		clearInterval(timer);
+		      		timer = setInterval(function(){
+		      			count-=10;
+		      			if (count<=-468) {
+		      				clearInterval(timer);
+		      				count = -468;
+		      			}
+		      			img.style.top = count + "px";
+		      		},50)
+		      }
+		      
+		      up.onmouseout=function(){
+		      	clearInterval(timer);
+		      }
+		      
+		      down.onmouseover=function(){
+		      	timer = setInterval(function(){
+		      			count+=10;
+		      			if ( count>=0 ) {
+		      				clearInterval(timer);
+		      				count=0;				
+		      			}
+		      			img.style.top = count + "px";
+		      	},50)
+		      }
+		      
+		      down.onmouseout=function(){
+		      	clearInterval(timer);
+		      }
+		
+	</script>
+</html>

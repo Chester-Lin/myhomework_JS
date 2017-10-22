@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+				p {
+					width: 50px;
+					height: 50px;
+					background: red;
+					color: #fff;
+					text-align: center;
+					line-height: 50px;
+					float: left;
+					margin-right:5px;
+					border-radius: 50%;
+					font-family:"微软雅黑";
+				}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="随机" id="btn" />
+		<p></p><p></p><p></p><p></p><p></p><p></p>
+		
+	</body>
+	
+	<script>
+		//小于10的数加上0
+		  function  addZero(n){
+		  	  /* if(  n<10  )   return "0"+n;
+		  	   else    return ""+n;		  	*/
+		  	  
+		  	  return n<10 ? "0"+n : ""+n;
+		  }
+		  
+		//检测数字是否已有  
+		  function  checkSame(n,arr){
+		  	      for ( var i=0;i<arr.length;i++  ) {
+		  	      	   		if( arr[i]==n  )  return false;		
+		  	      }
+		  	      return true;
+		  }
+		  
+		  //随机数
+		  function  rnd(n,m){
+		  	     return parseInt(   Math.random()*( m-n )+n   );
+		  }
+
+		  var box = [];
+		  var btn = document.getElementById("btn");
+		  var aP = document.getElementsByTagName("p");
+		  var timer = null ;
+
+		 function show(){
+		 	   clearInterval(timer);
+		 	   timer = setInterval(function(){
+		 	   	
+				 	       box=[];
+				  	       for ( var i=0 ;   i<6 ;  i++   ) {
+				  	       	          var n = addZero(  rnd(  1,34  )   ) ;
+				  	       	          var rz = checkSame(n,box) ;
+				  	       	          if (  rz  ) {
+				  	       	          	    box.push(n);
+				  	       	          } else{
+				  	       	          	    i--;
+				  	       	          }
+				  	       }
+				  	       
+				  	       for (  var i=0;i<aP.length;i++  ) {
+				  	                       aP[i].innerHTML=box[i]	;          
+				  	       }
+				  	       
+				  	       setTimeout(function(){
+								clearInterval(timer);
+							},1000);	
+
+		 	   },30);
+		 	       
+		  }
+		 show();
+		btn.onclick = show;
+
+
+		
+	</script>
+</html>
