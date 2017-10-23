@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+				var str = 'welcome to china';
+				//Welcome To China
+				var arr = str.split(' ');
+				var arr2 = [];
+				//[welcome,to,china]
+				for(var i = 0; i < arr.length; i++){
+					var newStr = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+					arr2.push(newStr);
+				}
+				alert(arr2.join(' '));
+		</script>
+
+	</body>
+</html>

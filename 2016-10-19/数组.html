@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr = [];
+
+/*			//alert(arr.length);
+			//从后添加三个 1 ，2, 3
+			arr.push(1);
+			arr.push(2);
+			arr.push(3);
+			alert(arr);
+			
+			//从前面加0 
+			arr.unshift(0);
+			alert(arr);
+			
+			//从后开始删一个
+			arr.pop();
+			alert(arr);
+			
+			//从前面开始删一个
+			arr.shift();
+			alert(arr);
+		// 排序	
+			var arr = [1,10,3,9,5];
+			alert(arr.reverse());*/
+		//数组组合
+		var arr1 = [1,2,3];
+		var arr2 = [4,5,6];
+		var arr3 = [7,8,9];
+		alert(arr1.concat(arr3,arr2));
+
+		/*var arr = [10,32,2,42,6375,90,32,06,17,52];
+		arr.sort(function(n1,n2){//比较函数;
+			//n1-n2如果是负数:位置不变;
+			//n1-n2如果是正数: 交换位置;
+			
+			return n1 - n2;
+		});
+		alert(arr);*/
+		
+		/*var arr = ['welcome','to','china'];
+		//welocme&to&china
+		var c = arr.join('&');
+		alert(c);*/
+	 
+	 // 删除
+		var arr = [1,2,3,4,5,6];
+		arr.splice(3,2);
+		alert(arr);
+
+     //替换
+
+		var arr = [1,2,3,4,5,6];
+		arr.splice(3,2,'a','b');
+		alert(arr);
+	//添加
+		var arr = [1,2,3,4,5,6];
+		arr.splice(3,0,'a','b');
+		//
+		alert(arr)
+	
+		</script>
+	</body>
+</html>
