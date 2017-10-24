@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function show(){
+				var a;
+				alert(a);
+				var a = 12;
+			}
+			show();
+			
+			
+			
+			function show(){
+				alert('1');
+			}
+			window.onload = function(){
+				var oBtn = document.getElementById('btn');
+				
+				oBtn.onclick = function(){
+					show();	
+				}
+			
+			}
+
+
+		</script>
+	</body>
+</html>
