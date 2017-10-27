@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 50px;
+				height:50px;
+				line-height:50px;
+				text-align:center;
+				color: #fff;
+				background:red;
+				float:left;
+				border-radius: 50%;
+				margin:5px;
+			}
+		</style>
+	</head>
+	<script>
+		window.onload=function(){
+			var str = '穿花衬衫要配上一把乌克丽丽，不然看起来会像流氓兄弟,穿西装要记得记得带个女伴,不然看起来会像泊车小弟';
+			
+			/*for (var i=0;i<str.length;i++) {
+				var oDiv = document.createElement('div');
+				oDiv.innerHTML=str.charAt(i);
+				document.body.appendChild(oDiv);
+			}*/
+			var timer = null;
+			var iNow = 0;
+			timer = setInterval(function(){
+				if (iNow==str.length-1) {
+					clearInterval(timer);
+				}
+				var oDiv = document.createElement('div');
+				oDiv.innerHTML=str.charAt(iNow);
+				document.body.appendChild(oDiv);
+				iNow++;
+			},30)
+			
+			
+			
+		}
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="box">
+			<li>
+		    	<ul>
+		        	<li></li>
+		            <li></li>
+		            <li></li>
+		            <li></li>
+		        </ul>
+		    </li>
+		    <li></li>
+		    <li></li>
+		    <li></li>
+		</ul>
+
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBox = document.getElementById("box");
+			var aLi1 = oBox.getElementsByTagName('li');
+			var aLi2 = oBox.children;
+			alert(aLi1.length);
+			alert(aLi2.length);
+			
+		}
+	</script>
+</html>

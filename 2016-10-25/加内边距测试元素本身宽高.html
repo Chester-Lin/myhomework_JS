@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box {
+				width: 100px;
+				height: 200px;
+				background: red;
+				padding: 20px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			function getStyle(obj,arr){
+				if (obj.currentStyle) {
+						return obj.currentStyle[arr];
+				} else{
+						return getComputedStyle(obj,false)[arr];
+				}
+			}
+			
+			window.onload = function(){
+				var oBox = document.getElementById('box');
+				
+				oBox.onclick=function(){
+					alert("宽度是"+oBox.offsetWidth+"   类型是"+typeof oBox.offsetWidth);
+					//alert(oBox.offsetHeight);
+					alert("宽度是"+getStyle(oBox,'width')+"  类型是"+typeof getStyle(oBox,'width'));
+					
+				}
+			}
+		</script>
+	</body>
+</html>

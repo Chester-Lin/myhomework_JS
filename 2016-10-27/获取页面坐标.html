@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		body {
+			border: #000 1px solid;
+			height: 100px;
+		}
+		</style>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*document.onclick=function(){
+				alert('1');
+			}*/
+			
+				document.body.onclick=function(ev){
+					//alert(event.clientX+"  :  "+event.clientY);
+				
+					var oEvent = ev || event;
+					alert(oEvent.pageY)
+					alert(oEvent.clientX+"   :   "+oEvent.clientY);
+				}
+			
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#div1{
+			width: 300px;
+			height:300px;
+		}
+		
+		#div2 {
+			width: 200px;
+			height:200px;
+		}
+		
+		#div3 {
+			width: 100px;
+			height:100px;
+		}
+	</style>
+
+	<body>
+		<div id="div1" style="background: red;">
+    	<div id="div2" style="background: green;">
+	        	<div id="div3" style=" background: yellow;"></div>
+	        </div>
+	    </div>
+
+	</body>
+	<script>
+		window.onload=function(){
+			var oDiv1 = document.getElementById('div1');
+			var oDiv2 = document.getElementById('div2');
+			var oDiv3 = document.getElementById('div3');
+			
+			oDiv1.onclick=function(){
+				alert(this.style.background);
+			}
+			oDiv2.onclick=function(){
+				alert(this.style.background);
+			}
+			oDiv3.onclick=function(){
+				alert(this.style.background);
+			}
+		}
+	</script>
+</html>

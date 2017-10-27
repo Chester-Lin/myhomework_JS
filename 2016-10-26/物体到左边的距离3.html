@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+		}
+		#box4 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin-left: 100px;
+		}
+		
+		#box2,
+		#box1,
+		#box3 {
+			position: relative;
+			margin-left: 100px;
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBox4=document.getElementById("box4");
+				oBox4.onclick=function(){
+					alert(getPos(oBox4).top);
+				}
+			}
+			function getPos(obj){
+				var l = 0;
+				var t = 0;
+				while(obj){
+					l+=obj.offsetLeft;
+					t+=obj.offsetTop;	
+					obj = obj.offsetParent;
+				}
+				return {left:l,top:t}
+			}
+
+		</script>
+
+	</head>
+	<body>
+		<div id="box2">
+			<div id="box1">
+		    	<div id="box3">
+		        	<div id="box4"></div>
+		        </div>
+		    </div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="box">
+			<li>111<a href="javascript:void(0);">隐藏</a></li>
+			<li>222<a href="javascript:void(0);">隐藏</a></li>
+			<li>333<a href="javascript:void(0);">隐藏</a></li>
+			<li>444<a href="javascript:void(0);">隐藏</a></li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBox = document.getElementById("box");
+			var aBtn = oBox.getElementsByTagName('a');
+			
+			for (var i=0;i<aBtn.length;i++) {
+				aBtn[i].onclick = function(){
+					this.parentNode.style.display = 'none';
+				}
+			}
+		}
+	</script>
+</html>
