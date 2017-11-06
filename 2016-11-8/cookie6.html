@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		name:cookie名字,value：cookie值； iDay：过期时间
+		setCookie(name，value，iDay);
+		<script type="text/javascript">
+			function setCookie(name,value,iDay){
+				if (iDay) {
+					var oDate = new Date();
+					oDate.setDate(oDate.getDate()+iDay);
+					document.cookie = name+'='+value+';path=/;expires='+oDate;
+				} else{
+					document.cookie = name+'='+value+';path=/';
+				}
+			}
+		</script>
+	</body>
+</html>

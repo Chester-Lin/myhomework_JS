@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+	        function removeEvent(obj,sEv,fn){
+	            if(obj.removeEventListener){
+	                return obj.removeEventListener(sEv,fn,false)
+	            }else{
+	                return obj.detachEvent('on' + sEv,fn);
+	            }
+	        }
+	    </script>
+
+	</body>
+</html>

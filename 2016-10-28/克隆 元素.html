@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height:200px;
+				background: red;
+				color: #fff;
+				margin-bottom: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn"/>
+		<div id="box">
+			<h3>我是一个H3</h3>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oBtn = document.getElementById('btn');
+			var oBox = document.getElementById('box');
+			
+			oBtn.onclick = function(){
+				var newDiv = oBox.cloneNode(true);
+				//newDiv.removeAttribute('id');
+				document.body.appendChild(newDiv);
+			}
+		}
+	</script>
+</html>
